@@ -1,25 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>My Class Schedule</title>
+</head>
+<body>
 
--------------------------------------------------
-[HEADER: Nav Bar]
--------------------------------------------------
-[MAIN SECTION]
-   Title: “My Class Schedule”
-   Subtitle: “View and manage your weekly classes below.”
--------------------------------------------------
-[CLASS SCHEDULE TABLE]
-   +--------------------------------------------+
-   | Time | Monday | Tuesday | Wednesday | ...  |
-   +--------------------------------------------+
-   | 8AM  | [Class Box Placeholder]             |
-   | 9AM  | ...                                |
-   +--------------------------------------------+
-   Label: “Dynamic schedule display (localStorage)”
--------------------------------------------------
-[ADD CLASS FORM]
-   Fields: “Course Name” | “Day” | “Start Time” | “End Time”
-   Button: “Add to Schedule”
-   Label: “Stores user data in localStorage”
--------------------------------------------------
-[FOOTER]
-   “Campus Life Super App | Schedule Planner | © 2025”
--------------------------------------------------
+  <!-- ================ HEADER ================= -->
+  <header>
+    <h1>My Class Schedule</h1>
+    <nav>
+      <a href="index.html">Home</a> |
+      <a href="map.html">Map</a> |
+      <a href="dining.html">Dining</a> |
+      <a href="events.html">Events</a> |
+      <a href="community.html">Community</a> |
+      <a href="devotions.html">Devotions</a> |
+      <a href="schedule.html">Schedule</a>
+    </nav>
+  </header>
+
+  <!-- ================ SCHEDULE GRID ================= -->
+  <section>
+    <h2>Weekly Class Schedule</h2>
+    <div style="height:300px; border:1px solid black;">
+      [Weekly Grid - localStorage Placeholder]
+    </div>
+  </section>
+
+  <!-- ================ ADD CLASS FORM ================= -->
+  <section>
+    <h3>Add a Class</h3>
+    <input type="text" placeholder="Course Name">
+    <select>
+      <option>Monday</option>
+      <option>Tuesday</option>
+      <option>Wednesday</option>
+      <option>Thursday</option>
+      <option>Friday</option>
+    </select>
+    <input type="time">
+    <input type="time">
+    <button>[Add to Schedule]</button>
+  </section>
+
+  <!-- ================ FOOTER ================= -->
+  <footer>
+    Schedule Planner | © 2025 OKWU Campus Life
+  </footer>
+
+</body>
+</html>
