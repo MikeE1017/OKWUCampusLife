@@ -45,47 +45,25 @@
     <section class="container">
       <div class="page-header">
         <h2>Campus Events</h2>
-        <p>Keep up with what's happening on campus this week.</p>
+        <p>Stay updated on chapel services and upcoming spiritual life events.</p>
       </div>
 
+      <!-- Chapel Events API Section -->
       <div class="content-card mb-4">
-        <h3>Upcoming Events (Static Placeholder)</h3>
-        <p>
-          In the final version, this section could pull events from a campus
-          events API or Google Calendar feed.
+        <h3>Chapel Events (Dynamic API)</h3>
+        <p>Click below to load upcoming chapel services and speakers.</p>
+
+        <button id="loadChapelBtn" class="btn btn-secondary mb-3">
+          Load Chapel Events
+        </button>
+
+        <ul id="chapelEventsList" class="list-group">
+          <!-- Chapel events load here -->
+        </ul>
+
+        <p class="text-muted mt-2">
+          This data is loaded from a custom API file (chapel-events.json).
         </p>
-        <div class="placeholder-box">
-          API integration for events will appear here in the final project.
-        </div>
-      </div>
-
-      <div class="row g-4">
-        <div class="col-md-4">
-          <div class="content-card h-100">
-            <span class="badge bg-primary badge-label">Today</span>
-            <h3 class="mt-2">Chapel Service</h3>
-            <p><strong>Time:</strong> 10:00 AM - 11:00 AM</p>
-            <p><strong>Location:</strong> Main Chapel</p>
-          </div>
-        </div>
-
-        <div class="col-md-4">
-          <div class="content-card h-100">
-            <span class="badge bg-success badge-label">Tomorrow</span>
-            <h3 class="mt-2">Game Night</h3>
-            <p><strong>Time:</strong> 7:00 PM - 9:00 PM</p>
-            <p><strong>Location:</strong> Student Center</p>
-          </div>
-        </div>
-
-        <div class="col-md-4">
-          <div class="content-card h-100">
-            <span class="badge bg-warning text-dark badge-label">This Week</span>
-            <h3 class="mt-2">Career Workshop</h3>
-            <p><strong>Time:</strong> Thursday, 3:00 PM</p>
-            <p><strong>Location:</strong> Room 204</p>
-          </div>
-        </div>
       </div>
     </section>
   </main>
