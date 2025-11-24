@@ -73,12 +73,12 @@
     ]
   },
   {
-    "date": "Wednesday-Sunday, November 26-30, 2025",
+    "date": "Wednesday–Sunday, November 26–30, 2025",
     "events": [
       {
         "time": "All Day",
         "title": "Thanksgiving Break",
-        "location": "Campus Closed (Varies)"
+        "location": "Campus Closed"
       },
       {
         "time": "TBA",
@@ -126,7 +126,7 @@
     "date": "Saturday, December 6, 2025",
     "events": [
       {
-        "time": "9:00 AM - 10:00 PM",
+        "time": "9:00 AM – 10:00 PM",
         "title": "Private Event",
         "location": "Mansion"
       },
@@ -159,7 +159,7 @@
     ]
   },
   {
-    "date": "Monday-Wednesday, December 8-10, 2025",
+    "date": "Monday–Wednesday, December 8–10, 2025",
     "events": [
       {
         "time": "All Day",
@@ -219,3 +219,5 @@
     ]
   }
 ]
+
+
