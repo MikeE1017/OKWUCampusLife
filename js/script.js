@@ -199,7 +199,7 @@ async function loadTodaysEvent() {
 
   } catch (error) {
     console.error("Error loading today's event:", error);
-    eventTarget.textContent = "Unable to load today’s event.";
+    eventTarget.textContent = "Unable to load today's event.";
   }
 }
 

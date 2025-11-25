@@ -67,17 +67,24 @@
         <p>Start with any of the main areas below.</p>
       </div>
 
-      <div class="row g-4">
-        <div class="col-md-4">
-          <div class="content-card h-100">
-            <h3>Campus Map</h3>
-            <p>Find buildings, parking, and key locations across campus.</p>
-            <div class="placeholder-box">
-              Map image/API will go here in the final version.
-            </div>
-            <a href="map.html" class="btn btn-primary mt-2">Go to Map</a>
-          </div>
-        </div>
+      <div class="content-card mt-4">
+        <h2>Campus Map Preview</h3>
+        <p>Tap the map to open the full interactive view.</p>
+
+        <a href="map.html">
+          <img 
+            src="images/okwu-map.png"
+            alt="OKWU Campus Map preview"
+            class="map-thumb"
+          />
+
+        </a>
+
+        <p class="text-muted mt-2" style="font-size: 0.85rem;">
+          Map screenshot © Oklahoma Wesleyan University. Used for educational, non-commercial purposes.
+        </p>
+      </div>
+
 
         <div class="col-md-4">
           <div class="content-card h-100">
@@ -92,16 +99,15 @@
         
         <div class="col-md-4">
           <div class="content-card h-100">
-            <h3>Events & Community</h3>
+            <h4>Events & Community</h3>
             <p>Stay updated with campus events and daily devotions.</p>
             <a href="events.html" class="btn btn-outline-primary mt-2">Campus Events</a>
             <a href="community.html" class="btn btn-outline-secondary mt-2">Community & Devotions</a>
           </div>
         </div>
-      </div>
-      
+      </div>      
       <div class="content-card mt-4">
-        <h3>Today's Events</h3>
+        <h5>Today's Events</h3>
         <p id="todaysEvents">Loading today's events...</p>
       </div>
     </section>

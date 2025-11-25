@@ -128,3 +128,11 @@ footer {
   letter-spacing: 0.05em;
 }
 
+/* Home page map thumbnail */
+.map-thumb {
+  max-height: 320px;
+  object-fit: contain;
+  width: 50%;
+  background: #fff;
+}
+
