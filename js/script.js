@@ -166,9 +166,9 @@ async function loadTodaysEvent() {
   if (!eventTarget) return; // Prevent running on non-home pages
   
   try {
-    const response = await fetch("js/okwu-events.json");
+    // Cache-busting parameter fixes GitHub caching issues
+    const response = await fetch("js/okwu-events.json?nocache=" + Date.now());
     const eventsData = await response.json();
-
     // Get today's ISO date (YYYY-MM-DD)
     const todayISO = new Date().toISOString().slice(0, 10);
 
