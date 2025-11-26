@@ -236,3 +236,5 @@ if (loadMenuBtn && diningMenuList) {
     }
   });
 }
+
+document.addEventListener("DOMContentLoaded", loadTodaysEvent);
