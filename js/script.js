@@ -238,3 +238,81 @@ if (loadMenuBtn && diningMenuList) {
 }
 
 document.addEventListener("DOMContentLoaded", loadTodaysEvent);
+
+// ======================================
+// Prayer & Support Wall with Name + Prayer Button
+// ======================================
+
+const nameInput = document.getElementById("prayerNameInput");
+const prayerInput = document.getElementById("prayerMessageInput");
+const prayerButton = document.getElementById("postPrayerBtn");
+const prayerList = document.getElementById("prayerWallList");
+
+// Load stored messages on page load
+document.addEventListener("DOMContentLoaded", loadPrayerMessages);
+
+if (prayerButton && prayerInput && prayerList) {
+  prayerButton.addEventListener("click", () => {
+    const message = prayerInput.value.trim();
+    const userName = nameInput.value.trim();
+    if (!message) return;
+
+    const timestamp = new Date().toLocaleString("en-US", {
+      weekday: "short",
+      hour: "numeric",
+      minute: "numeric"
+    });
+
+    const newMessage = {
+      text: message,
+      name: userName || "Anonymous",
+      time: timestamp,
+      prayers: 0 // Count how many “I’m praying” clicks
+    };
+
+    const savedMessages = JSON.parse(localStorage.getItem("prayerMessages")) || [];
+    savedMessages.unshift(newMessage);
+    localStorage.setItem("prayerMessages", JSON.stringify(savedMessages));
+
+    prayerInput.value = "";
+    nameInput.value = "";
+    loadPrayerMessages();
+  });
+}
+
+function loadPrayerMessages() {
+  if (!prayerList) return;
+  prayerList.innerHTML = "";
+
+  const savedMessages = JSON.parse(localStorage.getItem("prayerMessages")) || [];
+
+  savedMessages.forEach((msg, index) => {
+    const li = document.createElement("li");
+    li.className = "list-group-item";
+
+    li.innerHTML = `
+      <strong>${msg.name}</strong><br>
+      ${msg.text}
+      <div class="text-muted" style="font-size: 0.75rem;">
+        Posted ${msg.time}
+      </div>
+
+      <button class="btn btn-outline-primary btn-sm mt-2 prayer-btn" data-index="${index}">
+        🙏 I'm Praying (${msg.prayers})
+      </button>
+    `;
+
+    prayerList.appendChild(li);
+  });
+
+  // Attach prayer button actions
+  document.querySelectorAll(".prayer-btn").forEach(btn => {
+    btn.addEventListener("click", () => {
+      const index = btn.getAttribute("data-index");
+      const savedMessages = JSON.parse(localStorage.getItem("prayerMessages")) || [];
+      savedMessages[index].prayers++;
+      localStorage.setItem("prayerMessages", JSON.stringify(savedMessages));
+      loadPrayerMessages();
+    });
+  });
+}
