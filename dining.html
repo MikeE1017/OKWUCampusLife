@@ -49,66 +49,125 @@
 
   <main>
     <section class="container">
-      <div class="page-header">
-        <h2>Dining Options</h2>
-        <p>See campus dining halls, cafés, and hours.</p>
-      </div>
+  <div class="page-header">
+    <h2>Dining Options</h2>
+    <p>Weekly food service schedule for the OKWU Dining Hall.</p>
+  </div>
 
-      <div class="row g-4">
-        <div class="col-md-6">
-          <div class="content-card h-100">
-            <h3>Main Dining Hall</h3>
-            <p>All-you-can-eat meals with rotating menus.</p>
-            <ul>
-              <li><strong>Weekdays:</strong> 7:00 AM - 7:00 PM</li>
-              <li><strong>Weekends: Brunch</strong> 11:00 AM - 1:30 PM<strong> Dinner</strong> 5:00 PM - 7:30 PM</li>
-            </ul>
-            <div class="content-card mb-4">
-              <h3>Weekly Dining Menu (Dynamic API)</h3>
-              <p>Click below to load this week's dining hall menu.</p>
+  <div class="content-card">
+    <h3>Dining Schedule</h3>
+    <p class="text-muted">Hours are consistent each week unless otherwise announced.</p>
 
-              <button id="loadMenuBtn" class="btn btn-secondary mb-2">
-                Load Dining Menu
-              </button>
+    <h4 class="mt-3">Monday - Friday</h4>
+    <table class="table table-striped">
+      <thead class="table-primary">
+        <tr>
+          <th>Meal</th>
+          <th>Time</th>
+          <th>Details</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Breakfast</td>
+          <td>7:00 AM - 9:30 AM</td>
+          <td>Traditional breakfast bar</td>
+        </tr>
+        <tr>
+          <td>Omelets</td>
+          <td>9:30 AM - 11:00 AM</td>
+          <td>Made-to-order daily</td>
+        </tr>
+        <tr>
+          <td>Lunch</td>
+          <td>11:15 AM - 1:00 PM</td>
+          <td>Main buffet, salad bar, & dessert</td>
+        </tr>
+        <tr>
+          <td>Grill Window</td>
+          <td>1:00 PM - 5:15 PM</td>
+          <td>Burgers, hot sandwiches, & chicken strips</td>
+        </tr>
+        <tr>
+          <td>Dinner</td>
+          <td>5:15 PM - 7:00 PM</td>
+          <td>Hot entrées, sides, salad bar, and dessert</td>
+        </tr>
+      </tbody>
+    </table>
 
-              <ul id="diningMenuList" class="list-group">
-                <!-- Menu loads here -->
-              </ul>
+    <h4 class="mt-4">Saturday</h4>
+    <table class="table table-striped">
+      <thead class="table-primary">
+        <tr>
+          <th>Meal</th>
+          <th>Time</th>
+          <th>Details</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Brunch</td>
+          <td>11:15 AM - 1:00 PM</td>
+          <td>Breakfast & salad bar</td>
+        </tr>
+        <tr>
+          <td>Dinner</td>
+          <td>5:00 PM - 6:30 PM</td>
+          <td>Evening meal service</td>
+        </tr>
+      </tbody>
+    </table>
 
-              <p class="text-muted mt-2">
-                Menu provided by a custom JSON file (menu.json).
-              </p>
-            </div>
-             <div class="content-card section-spacing">
-              <h3>Dietary Preferences</h3>
-              <p>
-                In the final version, users could filter options by dietary needs
-                (vegetarian, dairy-free, gluten-free, etc.).
-              </p>
-              <div class="placeholder-box">
-                Filter buttons and menu results will appear here (JS + API in final app).
-              </div>
-            </div>
-          </section>
-        </main>
+    <h4 class="mt-4">Sunday</h4>
+    <table class="table table-striped mb-0">
+      <thead class="table-primary">
+        <tr>
+          <th>Meal</th>
+          <th>Time</th>
+          <th>Details</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Brunch</td>
+          <td>11:15 AM - 1:00 PM</td>
+          <td>Main Buffet (Omelets available — made-to-order)</td>
+        </tr>
+        <tr>
+          <td>Dinner</td>
+          <td>5:00 PM - 6:30 PM</td>
+          <td>Evening meal service</td>
+        </tr>
+      </tbody>
+    </table>
 
-          </div>
-        </div>
+    <p class="text-muted mt-3">
+      Hours may adjust during holidays, breaks, or special campus events.
+    </p>
+  </div>
 
-        <div class="col-md-6">
-          <div class="content-card h-100">
-            <h3>Doc Lacy's Campus Coffee House</h3>
-            <p>Quick coffee, snacks, and grab-and-go meals.</p>
-            <ul>
-              <li><strong>Open: Mon - Thur</strong> 7:00 AM - 11:30 PM</li>
-              <li><strong>Friday</strong> 7:30 AM - 12:00 AM (Next day)</li>
-              <li><strong>Saturday</strong> 7:00 AM - 12:00 AM (Next day)</li>
-              <li><strong>Sunday Closed</strong></li>
-              <li><strong>Location:</strong> Haltom Campus Center, downstairs</li>
-            </ul>
-            
+  <div class="content-card mt-4">
+    <h3>Doc Lacy's Coffee House</h3>
+    <p>Student coffee bar located in the Student Center.</p>
+    <ul>
+      <li><strong>Open: Mon - Thur</strong> 7:00 AM - 11:30 PM</li>
+      <li><strong>Friday</strong> 7:30 AM - 12:00 AM (Next day)</li>
+      <li><strong>Saturday</strong> 7:00 AM - 12:00 AM (Next day)</li>
+      <li><strong>Sunday Closed</strong></li>
+      <li><strong>Location:</strong> Haltom Campus Center, downstairs</li>
+    </ul>
+  </div>
 
-     
+</section>
+
+
+</main>
+
+  </div>
+</div>
+
+        
 
   <footer class="bg-white mt-4">
     <div class="container">
