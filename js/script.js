@@ -3,22 +3,6 @@
 // Final script.js - Event-driven programming + API usage
 // =========================================================
 
-// ======================================
-// Schedule Page Button (Event-Driven JS)
-// ======================================
-const scheduleButton = document.getElementById("loadScheduleBtn");
-
-if (scheduleButton) {
-  scheduleButton.addEventListener("click", () => {
-    alert("This feature will load your class schedule soon!");
-  });
-}
-
-// ======================================
-// Future Dining API Placeholder
-// ======================================
-const diningAPI = "https://api.placeholder.com/menu";
-// TODO: Replace with real dining API in future.
 
 // ======================================
 // Daily Devotion API (Bible Verse)
@@ -196,45 +180,6 @@ async function loadTodaysEvent() {
     console.error("Error loading today's event:", error);
     eventTarget.textContent = "Unable to load today's event.";
   }
-}
-
-// Run the function
-loadTodaysEvent();
-
-// ======================================
-// Dining Menu API (menu.json)
-// Loads weekly dining menu dynamically
-// ======================================
-const loadMenuBtn = document.getElementById("loadMenuBtn");
-const diningMenuList = document.getElementById("diningMenuList");
-
-if (loadMenuBtn && diningMenuList) {
-  loadMenuBtn.addEventListener("click", async () => {
-    try {
-      const response = await fetch("js/menu.json");
-      const data = await response.json();
-
-      diningMenuList.innerHTML = "";
-
-      data.days.forEach(day => {
-        const li = document.createElement("li");
-        li.className = "list-group-item";
-
-        li.innerHTML = `
-          <strong>${day.day}</strong><br>
-          <em>Lunch:</em> ${day.meals.lunch.join(", ")}<br>
-          <em>Dinner:</em> ${day.meals.dinner.join(", ")}
-        `;
-
-        diningMenuList.appendChild(li);
-      });
-
-    } catch (error) {
-      diningMenuList.innerHTML =
-        "<li class='list-group-item'>Unable to load dining menu.</li>";
-      console.error("Dining menu error:", error);
-    }
-  });
 }
 
 document.addEventListener("DOMContentLoaded", loadTodaysEvent);

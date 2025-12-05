@@ -1,4 +1,4 @@
-📌 OKWU Campus Life Web App
+# 📌 OKWU Campus Life Web App
 
 A responsive, student-focused campus utility for Oklahoma Wesleyan University
 
@@ -6,31 +6,30 @@ The OKWU Campus Life web application is a modern, mobile-friendly, and accessibl
 
 ---
 
-🎯 Project Purpose  
+# 🎯 Project Purpose  
 The OKWU Campus Life app brings together key campus resources—maps, dining info, events, chapel devotions, and schedule features—into a clean, modern interface.
 
 ---
 
-🛠️ Technical Overview
-| Requirement             | Implementation                                           |
-| ----------------------- | -------------------------------------------------------- |
-| Semantic HTML           | `<main>`, `<section>`, `<header>`, `<nav>`, `<footer>`   |
-| Custom CSS              | `/css/style.css`                                         |
-| Responsive Design       | Bootstrap grid + custom media queries                    |
-| Event-Driven JavaScript | Buttons that trigger dynamic rendering & fetch calls     |
-| Dynamic Content         | External API + two custom JSON APIs                      |
-| Accessibility           | ARIA labels, alt text, role attributes, high-contrast UI |
-| Deployment              | Hosted live on GitHub Pages                              |
-
+# 🛠️ Technical Overview
+| Requirement             | Implementation                                                            |
+| ----------------------- | ------------------------------------------------------------------------- |
+| Semantic HTML           | `<main>`, `<section>`, `<header>`, `<nav>`, `<footer>`                    |
+| Custom CSS              | `/css/style.css`                                                          |
+| Responsive Design       | Bootstrap grid + custom media queries                                     |
+| Event-Driven JavaScript | Buttons that trigger dynamic rendering & fetch calls                      |
+| Dynamic Content         | External API + two custom JSON APIs                                       |
+| Accessibility           | ARIA labels, alt text, role attributes, high-contrast UI                  |
+| Deployment              | Hosted live on GitHub Pages (https://mikee1017.github.io/OKWUCampus_Life/)|
 ---
 
-🧩 Code Architecture 
+# 🧩 Code Architecture 
 OKWUCampus_Life/
 │
 ├── index.html          (Home)
 ├── map.html            (Campus Map)
 ├── dining.html         (Dining Schedule)
-├── schedule.html       (My Classes placeholder)
+├── schedule.html      (Add & save your weekly class schedule — LocalStorage)
 ├── events.html         (Dynamic Events)
 ├── community.html      (Prayer & Support Wall)
 │
@@ -44,16 +43,17 @@ OKWUCampus_Life/
 
 ---
 
-🚀 Features
-🧭 Smart Navigation
+# 🚀 Features
+
+# 🧭 Smart Navigation
 
 Accessible <nav> with ARIA labels and fully responsive mobile menu
 
-🕒 Today’s Event Highlight
+# 🕒 Today’s Event Highlight
 
 Home page automatically loads today’s OKWU event based on the current date
 
-🎟 Dynamic Event Listings
+# 🎟 Dynamic Event Listings
 
 Two separate event APIs provide live-loaded content:
 
@@ -66,7 +66,7 @@ Chapel Services (custom JSON API)
 Fetches a random Bible verse from an external API
 https://labs.bible.org/api/?passage=random&type=json
 
-💬 Prayer & Support Wall
+# 💬 Prayer & Support Wall
 
 Community feature where students can post:
 
@@ -77,19 +77,19 @@ Encouragement
 Campus support messages
 ✨ Stored in LocalStorage, so messages persist between sessions
 
-🍽 Dining & Coffee Info
+# 🍽 Dining & Coffee Info
 
 Clear weekly dining schedule + Doc Lacy’s hours — mobile-friendly tables
 
-🗺 Campus Map
+# 🗺 Campus Map
 
 Campus map image embedded on the home page with responsive scaling
 
 ---
 
-🚀 How to Run the Project  
+# 🚀 How to Run the Project  
 You can visit the live version here:  
-**[GitHub Pages URL](YOUR_GITHUB_PAGES_LINK_HERE)**
+**[GitHub Pages URL](https://mikee1017.github.io/OKWUCampus_Life/)**
 
 To run locally:
 
@@ -101,7 +101,7 @@ git clone https://github.com/MikeE1017/OKWUCampus_Life.git
 
 ---
 
-🌐 API & Data Integration
+# 🌐 API & Data Integration
 External API
 
 ✔ Bible verse devotion API
@@ -109,14 +109,14 @@ External API
 
 Local JSON APIs
 
+Two custom JSON APIs (OKWU Events + Chapel Events) are dynamically fetched to satisfy the external data/API requirement.
+
 ✔ OKWU Campus Events
 ✔ Chapel Service Events
 
-These are fetched dynamically via fetch() and rendered into the DOM.
-
 ---
 
-🔒 Accessibility Commitment
+# 🔒 Accessibility Commitment
 
 ARIA-labeled navigation links
 
@@ -130,7 +130,7 @@ Mobile-first layout ensures universal usability
 
 ---
 
-📝 Credits  
+# 📝 Credits  
 - Daily Bible verses: **labs.bible.org API**  
 - Chapel events data: Custom JSON file created for academic use  
 - Campus map screenshot © Oklahoma Wesleyan University  
@@ -138,7 +138,7 @@ Mobile-first layout ensures universal usability
 
 ---
 
-🧪 Testing Summary
+# 🧪 Testing Summary
 
 Tested using Chrome DevTools across:
 
@@ -152,7 +152,7 @@ All links, APIs, layout, and UI components load correctly on GitHub Pages.
 
 ---
 
-📈 Future Enhancements (Roadmap)
+# 📈 Future Enhancements (Roadmap)
 
 Personal class schedule feature using secure login
 
@@ -164,7 +164,7 @@ User avatars + moderation features for community posts
 
 ---
 
-👤 About the Developer
+# 👤 About the Developer
 
 Built by Michael Ellis
 Cybersecurity major, Oklahoma Wesleyan University
